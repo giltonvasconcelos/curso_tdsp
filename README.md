@@ -1,4 +1,5 @@
 Competências Digitais para o Serviço Público
+
 Bem-vindo ao repositório oficial do curso Competências Digitais para o Serviço Público. Este espaço reúne materiais, recursos e conteúdos desenvolvidos para capacitar servidores públicos no uso estratégico, ético e seguro das tecnologias digitais, com foco em transparência, proteção de dados e inovação no setor público.
 
 📚 Sobre o Curso
