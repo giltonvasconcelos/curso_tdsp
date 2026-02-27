@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação do Projeto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            background-color: #f6f8fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 45px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        /* Estilos GitHub Markdown */
+        .markdown-body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            word-wrap: break-word;
+        }
+
+        .markdown-body h1 {
+            padding-bottom: 0.3em;
+            font-size: 2em;
+            border-bottom: 1px solid #eaecef;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .markdown-body h2 {
+            padding-bottom: 0.3em;
+            font-size: 1.5em;
+            border-bottom: 1px solid #eaecef;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.25em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .markdown-body p {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .markdown-body code {
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            background-color: rgba(27,31,35,0.05);
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Inconsolata', 'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+        }
+
+        .markdown-body pre {
+            padding: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: #f6f8fa;
+            border-radius: 3px;
+            margin-bottom: 16px;
+        }
+
+        .markdown-body pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .markdown-body blockquote {
+            padding: 0 1em;
+            color: #6a737d;
+            border-left: 0.25em solid #dfe2e5;
+            margin: 0 0 16px 0;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            padding-left: 2em;
+            margin-bottom: 16px;
+            margin-top: 0;
+        }
+
+        .markdown-body table {
+            display: block;
+            width: 100%;
+            overflow: auto;
+            margin-bottom: 16px;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        .markdown-body table th {
+            font-weight: 600;
+            padding: 6px 13px;
+            border: 1px solid #dfe2e5;
+            background-color: #f6f8fa;
+        }
+
+        .markdown-body table td {
+            padding: 6px 13px;
+            border: 1px solid #dfe2e5;
+        }
+
+        .markdown-body img {
+            max-width: 100%;
+            box-sizing: content-box;
+            background-color: #fff;
+        }
+
+        .markdown-body hr {
+            height: 0.25em;
+            padding: 0;
+            margin: 24px 0;
+            background-color: #e1e4e8;
+            border: 0;
+        }
+
+        .markdown-body a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .markdown-body a:hover {
+            text-decoration: underline;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #586069;
+            font-size: 16px;
+        }
+
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            border: 2px solid #e1e4e8;
+            border-top-color: #0366d6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .error {
+            color: #cb2431;
+            padding: 20px;
+            text-align: center;
+            background-color: #ffeef0;
+            border: 1px solid #f7c5c0;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #586069;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: #586069;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eaecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="content" class="markdown-body">
+            <div class="loading">Carregando documentação...</div>
+        </div>
+        <div class="footer">
+            <p>Documentação carregada do <a href="README.md" target="_blank">README.md</a> | 
+            Última atualização: <span id="update-time"></span></p>
+        </div>
+    </div>
+
+    <!-- Biblioteca para converter Markdown para HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <script>
+        async function loadReadme() {
+            const contentElement = document.getElementById('content');
+            const updateTimeElement = document.getElementById('update-time');
+            
+            try {
+                // Tentar carregar o README.md
+                const response = await fetch('README.md');
+                
+                if (!response.ok) {
+                    throw new Error(`Erro ao carregar README.md: ${response.status} ${response.statusText}`);
+                }
+                
+                const markdown = await response.text();
+                
+                // Configurar o marked com opções seguras
+                marked.setOptions({
+                    breaks: true,
+                    gfm: true,
+                    headerIds: true,
+                    mangle: false,
+                    sanitize: false
+                });
+                
+                // Converter Markdown para HTML
+                const htmlContent = marked.parse(markdown);
+                
+                // Atualizar o conteúdo
+                contentElement.innerHTML = htmlContent;
+                
+                // Atualizar a data/hora
+                const now = new Date();
+                updateTimeElement.textContent = now.toLocaleString('pt-BR');
+                
+                // Atualizar links para abrir em nova aba
+                document.querySelectorAll('.markdown-body a').forEach(link => {
+                    if (link.hostname !== window.location.hostname) {
+                        link.target = '_blank';
+                        link.rel = 'noopener noreferrer';
+                    }
+                });
+                
+                // Atualizar títulos com links âncora
+                document.querySelectorAll('.markdown-body h1, .markdown-body h2, .markdown-body h3').forEach(heading => {
+                    if (heading.id) {
+                        const anchor = document.createElement('a');
+                        anchor.href = `#${heading.id}`;
+                        anchor.className = 'anchor';
+                        anchor.innerHTML = '🔗';
+                        anchor.style.marginLeft = '8px';
+                        anchor.style.opacity = '0.5';
+                        anchor.style.textDecoration = 'none';
+                        heading.appendChild(anchor);
+                    }
+                });
+                
+            } catch (error) {
+                console.error('Erro ao carregar README:', error);
+                contentElement.innerHTML = `
+                    <div class="error">
+                        <strong>Erro ao carregar README.md</strong><br>
+                        ${error.message}<br><br>
+                        Verifique se o arquivo README.md existe no diretório atual.
+                    </div>
+                `;
+            }
+        }
+
+        // Carregar o README quando a página for aberta
+        loadReadme();
+        
+        // Opcional: recarregar a cada 5 minutos para manter atualizado
+        setInterval(loadReadme, 5 * 60 * 1000);
+    </script>
+</body>
+</html>
